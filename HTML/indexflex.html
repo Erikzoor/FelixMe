@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/Felix.css">
+    <title>Felix</title>
+</head>
+<body class="bodyflex">
+    <header class="headerflex">
+        <div class="containerflex">
+            <div class="headerflex_main">
+                <div class="logoflex">
+                    <a href="index.html">
+                    <img id='felix' src="Photo/felix-logo1.png" alt='Феликс очень позитивнй кот'>
+                    </a>
+                </div>
+            <div class="navflex">
+                <ul class="navflex-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href='indexflex.html'>Flex Феликса</a></li>
+                    <li><a href="gallery.html">Франшиза</a></li>
+                    <li><a href="games.html">Игрули</a></li>
+                    <li><a>О нас</a></li>
+                </ul>
+            </div>
+            <div class="searchflex">
+                <input class='searchflex_input'>
+                <button class='searchflex_button'>
+                    <span class='searchflex_button-icon'>
+                        
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    </header>
+    <main class="mainflex">
+     <section id="promoflex" class='mb-8'>
+    <div class="containerflex">
+      <div class="bannerflex">
+        <picture>
+            <source srcset="Photo/ugpilmBdt8g1.jpg">
+                <img class="banner_img"  src="Photo/ugpilmBdt8g1.jpg" id='map'>
+        </picture>
+
+        <div class="controls">
+        <button class="button button_right" type="button" id='coords'>
+            <i class="arrow-right"></i>
+        </button>
+        <button class="button button_left" type="button">
+            <i class="arrow-left"></i>
+        </button>
+      </div>
+    </div>
+</div>
+</section>
+<!-- BATTLESHIP -->
+<!--<div id='board'>
+    <div id='messageArea'></div>
+    <table>
+        <tr>
+            <td id='00'></td>
+            <td id='01'></td>
+            <td id='02'></td>
+            <td id='03'></td>
+            <td id='04'></td>
+            <td id='05'></td>
+            <td id='06'></td>
+        </tr>
+        <tr>
+            <td id='10'></td>
+            <td id='11'></td>
+            <td id='12'></td>
+            <td id='13'></td>
+            <td id='14'></td>
+            <td id='15'></td>
+            <td id='16'></td>
+        </tr>
+        <tr>
+            <td id='20'></td>
+            <td id='21'></td>
+            <td id='22'></td>
+            <td id='23'></td>
+            <td id='24'></td>
+            <td id='25'></td>
+            <td id='26'></td>
+        </tr>
+        <tr>
+            <td id='30'></td>
+            <td id='31'></td>
+            <td id='32'></td>
+            <td id='33'></td>
+            <td id='34'></td>
+            <td id='35'></td>
+            <td id='36'></td>
+        </tr>
+        <tr>
+            <td id='40'></td>
+            <td id='41'></td>
+            <td id='42'></td>
+            <td id='43'></td>
+            <td id='44'></td>
+            <td id='45'></td>
+            <td id='46'></td>
+        </tr>
+        <tr>
+            <td id='50'></td>
+            <td id='51'></td>
+            <td id='52'></td>
+            <td id='53'></td>
+            <td id='54'></td>
+            <td id='55'></td>
+            <td id='56'></td>
+        </tr>
+        <tr>
+            <td id='60'></td>
+            <td id='61'></td>
+            <td id='62'></td>
+            <td id='63'></td>
+            <td id='64'></td>
+            <td id='65'></td>
+            <td id='66'></td>
+        </tr>
+    </table>
+    <form>
+        <input type='text' id='guessInput' placeholder='A0'>
+        <input type='button' id='fireButton' value='Fire!'>
+    </form>
+</div>
+-->
+<!-- BATTLESHIP END -->
+<div id='xoTable'>
+    <table>
+        <tr>
+            <td id='0' class='td'></td>
+            <td id='1' class='td'></td>
+            <td id='2' class='td'></td>
+        </tr>
+        <tr>
+            <td id='3' class='td'></td>
+            <td id='4' class='td'></td>
+            <td id='5' class='td'></td>
+        </tr>
+        <tr>
+            <td id='6' class='td'></td>
+            <td id='7' class='td'></td>
+            <td id='8' class='td'></td>
+        </tr>
+    </table>
+</div>
+ <div style='width: 930px; margin: 60px auto' class='clearfix'>
+    <div style='width: 300px; margin: 0; float: left;'>
+      <img src='Photo/VGiU1InN-aE.jpg' id='felixFoto0' class='fex'>
+    </div>
+    <div style='width: 300px; margin: 0 15px; float: left;'>
+      <img src='Photo/qikEZ4MfLCM.jpg' id='felixFoto1' class='fex'>
+    </div>
+    <div style='width: 300px; margin: 0; float: left;' id='hhh'>
+      <img src='Photo/IMG_1352.jpg' id='felixFoto2' class='fex'>
+    </div>
+</div>
+   <section id='wish' class='container mb-5'>
+        <h3 id='youLikeIt' class="wish_header">Вам понравится</h3>
+    </section>
+    <section id='menu' class='container'>
+        <div class='group mb-8'>
+          <a href='#wishlist_negative' class='group_btn'>Феликсовый негатив</a>
+          <a href='#wishlist_positive' class='group_btn'>Феликсовый позитив</a>
+        </div>
+    </section>
+    <section>
+        <section id='wishlist_negative'class='container mb-3'>
+            <h4 class='h4'>Феликсовый негатив</h4>
+    <div class="wishlistflex">
+        <div class="wishlist_itemflex mb-5">
+        <div class='card'>
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/VGiU1InN-aE.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>недовольство</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>350 &#8381</span>
+            </div>
+            </div>
+        </div>
+        <div class="wishlist_itemflex mb-5">
+        <div class='card'> 
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/qikEZ4MfLCM.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>высокомерие</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>250 &#8381</span>
+            </div>
+        </div>
+    </div>
+        <div class="wishlist_itemflex mb-5">
+            <div class='card'>
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/IMG_2072.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>презрение</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>350 &#8381</span>
+            </div>
+        </div>
+    </div>
+        <div class="wishlist_itemflex mb-5">
+            <div class='card'>
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/IMG_2454.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>ругань</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>250 &#8381</span>
+            </div>
+        </div>
+    </div>
+       <div class="wishlist_itemflex mb-5">
+        <div class='card'>
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/VGiU1InN-aE.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>недовольство</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>350 &#8381</span>
+            </div>
+            </div>
+        </div>
+        <div class="wishlist_itemflex mb-5">
+        <div class='card'> 
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/qikEZ4MfLCM.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>высокомерие</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>250 &#8381</span>
+            </div>
+        </div>
+    </div>
+        <div class="wishlist_itemflex mb-5">
+            <div class='card'>
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/IMG_2072.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>презрение</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>350 &#8381</span>
+            </div>
+        </div>
+    </div>
+        <div class="wishlist_itemflex mb-5">
+            <div class='card'>
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/IMG_2454.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>ругань</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>250 &#8381</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section id='wishlist_positive'class='container mb-3'>
+            <h4 class='h4'>Феликсовый позитив</h4>
+    <div class="wishlistflex">
+        <div class="wishlist_itemflex mb-5">
+        <div class='card'>
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/IMG_1352.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>расслабление</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>350 &#8381</span>
+            </div>
+            </div>
+        </div>
+        <div class="wishlist_itemflex mb-5">
+        <div class='card'> 
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/IMG_2598.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>смех</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>250 &#8381</span>
+            </div>
+        </div>
+    </div>
+        <div class="wishlist_itemflex mb-5">
+            <div class='card'>
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/IMG_2485.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>удивление</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>350 &#8381</span>
+            </div>
+        </div>
+    </div>
+        <div class="wishlist_itemflex mb-5">
+            <div class='card'>
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/IMG_2403.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>зевота</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>250 &#8381</span>
+            </div>
+        </div>
+    </div>
+        <div class="wishlist_itemflex mb-5">
+        <div class='card'>
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/IMG_1352.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>расслабление</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>350 &#8381</span>
+            </div>
+            </div>
+        </div>
+        <div class="wishlist_itemflex mb-5">
+        <div class='card'> 
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/IMG_2598.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>смех</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>250 &#8381</span>
+            </div>
+        </div>
+    </div>
+        <div class="wishlist_itemflex mb-5">
+            <div class='card'>
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/IMG_2485.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>удивление</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>350 &#8381</span>
+            </div>
+        </div>
+    </div>
+        <div class="wishlist_itemflex mb-5">
+            <div class='card'>
+            <div class="wishlist_itemflex-pic">
+                <img src="Photo/IMG_2403.jpg">
+            </div>
+            <div class="wishlist_itemflex-body">
+                <span>зевота</span>
+                <h3>Феликс</h3>
+            </div>
+            <div class="wishlist_itemflex-footer">
+                <span>250 &#8381</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='keyboard'>
+    <div class='container'>
+        <div class='keyboard_box'>
+            <div>Esc</div><div>`</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>0</div><div>-</div><div>=</div><div class='heh'>Back</div>
+        </div>
+        <div class='keyboard_box'>
+            <div class='heh'>Tab</div><div>q</div><div>w</div><div>e</div><div>r</div><div>t</div><div>y</div><div>u</div><div>i</div><div>o</div><div>p</div><div>[</div><div>]</div><div>\</div><div>Del</div>
+        </div>
+        <div class='keyboard_box'>
+            <div class='heh'>Caps</div><div>a</div><div>s</div><div>d</div><div>f</div><div>g</div><div>h</div><div>j</div><div>k</div><div>l</div><div>;</div><div>'</div><div class='heh'>Enter</div>
+        </div>
+        <div class='keyboard_box'>
+            <div class='heh'>Shift</div><div>z</div><div>x</div><div>c</div><div>v</div><div>b</div><div>n</div><div>m</div><div>,</div><div>.</div><div>/</div><div>Up</div><div class='heh'>Shift</div>
+        </div>
+        <div class='keyboard_box'>
+            <div>Fn</div><div>Ctrl</div><div>Win</div><div>Alt</div><div class='heh'>Space</div><div>Alt</div><div>Ctrl</div><div>Left</div><div>Down</div><div>Right</div><div>hz</div>
+        </div>
+    </div>
+</section>
+<section class='apps'>
+    <div class="container">
+        <h2>Установите приложение</h2>
+        <p class='mb-3'>Установите наше приложение и будьте в числе первых за писсанными лапами</p>
+        <div class='mobileflex'>
+        <a href='errorpage.html' class='mobile_btn btn-apple'><span class='mobile_btn-subtitle'>Загрузите в</span><span class='mobile_btn-title'>App Store</span></a>
+        <a href='errorpage.html' class='mobile_btn btn-google'><span class='mobile_btn-subtitle'>Загрузите в</span><span class='mobile_btn-title'>Google Play</span></a>
+    </div>
+    </div>
+</section>
+</main>
+    <footer class='footerflex pt-5'>
+    <div class='container'>
+        <div class='footer_blockflex'>
+            <div class='footer_block-logoflex'>
+                <a href='index.html'>
+                  <img src='Photo/felix-logo1.png'>
+                </a>
+            </div>
+                <div class='footer_block-textflex'>© 2022 Felix group. Все права защищены. Все торговые марки являются собственностью соответствующих владельцев в РФ и других странах. <br />НДС включён во все цены, где он применим.</div>
+        </div>
+    </div>
+</footer>
+<script src='code.js'></script>
+</body>
+</html>
